@@ -1,15 +1,14 @@
 {
   "name": "servicio_de_envoltura_de_api_meteorologica",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Servicio de envoltura de API meteorológica",
+  "main": "index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "ts-node-dev --respawn ./src/index.ts"
   },
   "keywords": [],
-  "author": "",
+  "author": "Fabrizio Caricato",
   "license": "ISC",
-  "type": "commonjs",
   "dependencies": {
     "bcryptjs": "^3.0.3",
     "cors": "^2.8.6",

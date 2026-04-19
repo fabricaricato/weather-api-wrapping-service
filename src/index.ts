@@ -5,9 +5,8 @@ import { config } from "dotenv"
 
 // ─── Internal Modules ───
 import { connectDB } from "./config/database"
-// import { bookRouter } from "./routes/bookRouter"
-// import { authRouter } from "./routes/authRouter"
-// import { validateToken } from "./middleware/authMiddleware"
+import { weatherRouter } from "./routes/weatherRouter"
+// import { weatherRouter } from "./routes/weatherRouter"
 
 // Load environment variables and establish database connection on startup
 config()
@@ -44,8 +43,7 @@ server.get('/', (req: Request, res: Response) => {
 })
 
 // ─── API Routes ───
-// server.use('/api/books', bookRouter)  // Protected: requires valid JWT token
-// server.use('/api/auth', authRouter)                  // Public: register and login endpoints
+server.use('/api/weather', weatherRouter)
 
 // Only start the HTTP server when NOT running on Vercel (Vercel handles this via serverless functions)
 if (!process.env.VERCEL) {
